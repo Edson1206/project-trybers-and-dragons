@@ -89,4 +89,10 @@ export default class Character {
 
     this._lifePoints = this._maxLifePoints;
   }
+
+  special(enemy: Fighter): void {
+    const damage = 10;
+    this._strength = 10;
+    enemy.receiveDamage(damage + this._strength);
+  }
 }
